@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Message } from '@archives/api-interfaces';
 
 @Component({
-  selector: 'archives-root',
+  selector: 'arc-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
