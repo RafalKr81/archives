@@ -1,0 +1,22 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$blue-grey-palette, 700);
+$my-accent: mat.define-palette(mat.$grey-palette, 500);
+$my-warn: mat.define-palette(mat.$red-palette, A200);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+// @include mat.core-color($my-theme);
+// @include mat.button-color($my-theme);
+@include mat.all-component-colors($my-theme);

@@ -39,6 +39,12 @@
     "archives-e2e": {
       "tags": [],
       "implicitDependencies": ["archives"]
+    },
+    "layout-header": {
+      "tags": []
+    },
+    "shared-material": {
+      "tags": []
     }
   }
 }
