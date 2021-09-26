@@ -86,7 +86,10 @@
               "apps/archives/src/favicon.ico",
               "apps/archives/src/assets"
             ],
-            "styles": ["apps/archives/src/styles.scss"],
+            "styles": [
+              "apps/archives/src/styles_material.scss",
+              "apps/archives/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -185,6 +188,56 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/archives-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "layout-header": {
+      "projectType": "library",
+      "root": "libs/layout/header",
+      "sourceRoot": "libs/layout/header/src",
+      "prefix": "archives",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/layout/header"],
+          "options": {
+            "jestConfig": "libs/layout/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/layout/header/src/**/*.ts",
+              "libs/layout/header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-material": {
+      "projectType": "library",
+      "root": "libs/shared/material",
+      "sourceRoot": "libs/shared/material/src",
+      "prefix": "archives",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/material"],
+          "options": {
+            "jestConfig": "libs/shared/material/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/material/src/**/*.ts",
+              "libs/shared/material/src/**/*.html"
+            ]
           }
         }
       }
