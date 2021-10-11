@@ -37,3 +37,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ui configuration
+auth_config.json
+
+# Configs
+.env

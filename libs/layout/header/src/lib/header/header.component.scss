@@ -1,7 +1,27 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
+// @import '~@angular/material/theming';
+// @import '../../../../../../apps/archives/src/pallete.scss';
+@import 'module';
+
+:host {
+  $special-primary: mat.define-palette($background-pallete, 800, 700, 900);
+  $special-accent: mat.define-palette(mat.$brown-palette);
+  $special-theme: mat.define-dark-theme(
+    (
+      color: (
+        primary: $special-primary,
+        accent: $special-accent,
+      ),
+    )
+  );
+  @include mat.toolbar-color($special-theme);
+}
 
 mat-toolbar {
-  @include mat-elevation(6);
+  @include mat.elevation(6);
+  // @include mat-elevation(6);
+  height: 46px;
+  color: gray !important;
 
   .example-spacer {
     flex: 1 1 auto;

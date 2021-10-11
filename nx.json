@@ -40,10 +40,16 @@
       "tags": [],
       "implicitDependencies": ["archives"]
     },
+    "auth": {
+      "tags": []
+    },
     "layout-header": {
       "tags": []
     },
     "shared-material": {
+      "tags": []
+    },
+    "shared-styles": {
       "tags": []
     }
   }

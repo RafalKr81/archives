@@ -90,6 +90,10 @@
               "apps/archives/src/styles_material.scss",
               "apps/archives/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src/lib"]
+            },
+            "extractCss": true,
             "scripts": []
           },
           "configurations": {
@@ -192,6 +196,31 @@
         }
       }
     },
+    "auth": {
+      "projectType": "library",
+      "root": "libs/auth",
+      "sourceRoot": "libs/auth/src",
+      "prefix": "archives",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth"],
+          "options": {
+            "jestConfig": "libs/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/src/**/*.ts",
+              "libs/auth/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "layout-header": {
       "projectType": "library",
       "root": "libs/layout/header",
@@ -241,6 +270,31 @@
           }
         }
       }
+    },
+    "shared-styles": {
+      "projectType": "library",
+      "root": "libs/shared/styles",
+      "sourceRoot": "libs/shared/styles/src",
+      "prefix": "archives",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/styles"],
+          "options": {
+            "jestConfig": "libs/shared/styles/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/styles/src/**/*.ts",
+              "libs/shared/styles/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -271,6 +325,9 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
+      "style": "scss"
+    },
+    "@schematics/angular:component": {
       "style": "scss"
     }
   },
