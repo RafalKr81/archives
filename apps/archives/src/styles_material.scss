@@ -1,12 +1,14 @@
 @use '~@angular/material' as mat;
+@import '@angular/material/theming.scss';
+@import 'module';
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$blue-grey-palette, 700);
+$my-primary: mat.define-palette(mat.$blue-grey-palette, 900);
 $my-accent: mat.define-palette(mat.$grey-palette, 500);
 $my-warn: mat.define-palette(mat.$red-palette, A200);
 
-$my-theme: mat.define-light-theme(
+$my-theme: mat.define-dark-theme(
   (
     color: (
       primary: $my-primary,
@@ -16,7 +18,20 @@ $my-theme: mat.define-light-theme(
   )
 );
 
+$my-theme2: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-grey-palette, 900),
+      accent: mat.define-palette(mat.$grey-palette, 500),
+      warn: $my-warn,
+    ),
+  )
+);
+
 // Emit theme-dependent styles for common features used across multiple components.
-// @include mat.core-color($my-theme);
-// @include mat.button-color($my-theme);
-@include mat.all-component-colors($my-theme);
+@include mat.core-color($my-theme);
+@include mat.button-color($my-theme);
+@include mat.toolbar-color($my-theme2);
+
+// @include mat.all-component-colors($theme);
+// @include angular-material-theme($my-app-theme-custom);

@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
+import { authRoutes, AuthGuard } from '@archives/auth';
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminComponent,
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
+    canLoad: [AuthGuard],
+    pathMatch: 'full',
+  },
+  {
+    path: 'auth',
+    children: authRoutes,
   },
   // {
   //   path: 'student-dashboard',
