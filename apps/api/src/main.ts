@@ -1,12 +1,12 @@
+import { Settings } from './app/settings';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app/app.module';
-import { ApiConfigService } from './app/config/api-config.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = 'api';
+  const globalPrefix = Settings.server.prefix;
   app.setGlobalPrefix(globalPrefix);
   app.enableCors();
   // todo: for production disableErrorMessages set to true
@@ -15,8 +15,8 @@ async function bootstrap() {
     new ValidationPipe({ transform: true, disableErrorMessages: false })
   );
 
-  const apiConfigService = app.get(ApiConfigService);
-  const port = apiConfigService.getPort();
+  // const apiConfigService = app.get(ApiConfigService);
+  const port = Settings.server.port;
   await app.listen(port, () => {
     Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
   });
