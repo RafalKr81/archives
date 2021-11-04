@@ -1,15 +1,7 @@
-<mat-toolbar color="primary" class="my-special-color">
-  <button mat-icon-button>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="screen-sm" (click)="onMenuClick()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-    (click)="onLogout()"
-  >
-    <mat-icon>logout</mat-icon>
-  </button>
+  <arc-layout-logo></arc-layout-logo>
+  <arc-layout-header-menu></arc-layout-header-menu>
 </mat-toolbar>

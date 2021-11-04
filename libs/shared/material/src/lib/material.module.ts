@@ -18,6 +18,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatBottomSheetModule,
   ],
   exports: [
     MatButtonModule,
@@ -61,6 +63,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatBottomSheetModule,
   ],
 })
 export class MaterialModule {}

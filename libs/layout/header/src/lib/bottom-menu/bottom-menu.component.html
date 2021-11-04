@@ -1,0 +1,18 @@
+<mat-nav-list>
+  <mat-list-item (click)="openLink($event)">
+    <span mat-line>Events</span>
+  </mat-list-item>
+  <mat-list-item (click)="openLink($event)">
+    <span mat-line>Houses</span>
+  </mat-list-item>
+  <mat-list-item (click)="openLink($event)">
+    <span mat-line>Gardens</span>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <mat-list-item (click)="onLogout()">
+    <mat-icon mat-list-icon>logout</mat-icon>
+    <span>Logout</span>
+  </mat-list-item>
+</mat-nav-list>

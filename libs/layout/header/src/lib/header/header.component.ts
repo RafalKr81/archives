@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { BottomMenuComponent } from '../bottom-menu/bottom-menu.component';
 
 @Component({
   selector: 'arc-layout-header',
@@ -8,9 +9,9 @@ import { AuthService } from '@auth0/auth0-angular';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  constructor(private auth: AuthService) {}
+  constructor(private bottomSheet: MatBottomSheet) {}
 
-  onLogout(): void {
-    this.auth.logout();
+  onMenuClick() {
+    this.bottomSheet.open(BottomMenuComponent);
   }
 }

@@ -6,7 +6,7 @@ import { MaterialModule } from '@archives/shared/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
-import { environment as env, environment } from '../environments/environment';
+import { environment as env } from '../environments/environment';
 
 // todo: add server origin from configuration file
 @NgModule({
@@ -20,7 +20,7 @@ import { environment as env, environment } from '../environments/environment';
     AuthModule.forRoot({
       ...env.auth,
       httpInterceptor: {
-        allowedList: [{ uri: `${environment.backendApi}/*` }],
+        allowedList: [{ uri: `${env.backendApi}/*` }],
       },
     }),
   ],
