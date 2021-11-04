@@ -1,18 +1,20 @@
 @use '~@angular/material' as mat;
-// @import '~@archives/shared/styles';
 /* You can add global styles to this file, and also import other style files */
 @import './variables.scss';
-// @import './pallete.scss';
-// @import 'module';
+@import 'module';
 
 html,
 body {
   height: 100%;
   box-sizing: border-box;
-  // background-color: mat.get-color-from-palette($background-pallete, 900);
+  background-color: mat.get-color-from-palette($background-pallete2, 900);
 }
 
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  --primary-blue: #007cbe;
 }

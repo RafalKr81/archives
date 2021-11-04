@@ -1,10 +1,10 @@
 @use '~@angular/material' as mat;
-// @import '~@angular/material/theming';
-// @import '../../../../../../apps/archives/src/pallete.scss';
+// module it is a module.scss file from shared/styles lib
 @import 'module';
 
+// todo: move mat-toolbar to material style file
 :host {
-  $special-primary: mat.define-palette($background-pallete, 800, 700, 900);
+  $special-primary: mat.define-palette($background-pallete2, 800, 700, 900);
   $special-accent: mat.define-palette(mat.$brown-palette);
   $special-theme: mat.define-dark-theme(
     (
@@ -19,11 +19,19 @@
 
 mat-toolbar {
   @include mat.elevation(6);
-  // @include mat-elevation(6);
   height: 46px;
-  color: gray !important;
+  color: mat.get-color-from-palette($background-pallete2, 100) !important;
+  gap: 20px;
+}
 
-  .example-spacer {
-    flex: 1 1 auto;
+@media screen and (min-width: 768px) {
+  .screen-sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  arc-layout-header-menu {
+    display: none;
   }
 }
