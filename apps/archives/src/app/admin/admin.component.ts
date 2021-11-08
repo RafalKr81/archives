@@ -16,7 +16,9 @@ export class AdminComponent implements OnInit {
   constructor(public auth: AuthService, private http: HttpClient) {}
 
   ngOnInit(): void {
+    // fixme: remove from this method
     console.log('Admin component init, backend URL', environment.backendApi);
+
     this.auth.user$.pipe(take(1)).subscribe((profile) => {
       this.user = profile;
       console.log('Profile:', JSON.stringify(profile, null, 2));

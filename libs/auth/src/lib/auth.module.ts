@@ -6,16 +6,28 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { MaterialModule } from '@archives/shared/material';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AuthControllerService } from './services/auth-controller.service';
+import { StoreModule } from '@ngrx/store';
+import * as fromAuthReducer from './+states/auth.reducer';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, AuthRoutingModule, MaterialModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    AuthRoutingModule,
+    MaterialModule,
+    StoreModule.forFeature(
+      fromAuthReducer.AUTH_STATE_NAME,
+      fromAuthReducer.authReducer
+    ),
+  ],
   declarations: [LoginComponent, LogoutComponent],
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
-      providers: [AuthGuard],
+      providers: [AuthGuard, AuthControllerService],
     };
   }
 }
