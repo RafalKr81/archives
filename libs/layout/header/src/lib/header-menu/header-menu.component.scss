@@ -1,3 +1,5 @@
+@use 'shared/colors' as shared-colors;
+
 :host {
   display: flex;
   align-items: center;
@@ -28,6 +30,8 @@
 
   .menu-user-name {
     padding: 4px 16px 12px 16px;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 14px;
+    color: shared-colors.$font-accent;
   }
 }

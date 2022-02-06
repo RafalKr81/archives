@@ -12,12 +12,12 @@
   class="user-menu-button"
   [matMenuTriggerFor]="menu"
 >
-  <img [src]="user.picture" alt="User's profile picture" />
+  <img [src]="user?.picture" alt="User's profile picture" />
 </button>
 
 <mat-menu #menu="matMenu">
   <div class="menu">
-    <div class="menu-user-name">Welcome {{ user?.name }}</div>
+    <div class="menu-user-name">Welcome, {{ user?.name }}</div>
     <mat-divider></mat-divider>
     <button mat-menu-item (click)="onLogout()">
       <mat-icon fontSet="material-icons-outlined">logout</mat-icon>

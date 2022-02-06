@@ -1,26 +1,5 @@
-@use '~@angular/material' as mat;
-// module it is a module.scss file from shared/styles lib
-@import 'module';
-
-// todo: move mat-toolbar to material style file
-:host {
-  $special-primary: mat.define-palette($background-pallete2, 800, 700, 900);
-  $special-accent: mat.define-palette(mat.$brown-palette);
-  $special-theme: mat.define-dark-theme(
-    (
-      color: (
-        primary: $special-primary,
-        accent: $special-accent,
-      ),
-    )
-  );
-  @include mat.toolbar-color($special-theme);
-}
-
 mat-toolbar {
-  @include mat.elevation(6);
   height: 46px;
-  color: mat.get-color-from-palette($background-pallete2, 100) !important;
   gap: 20px;
 }
 

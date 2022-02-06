@@ -1,21 +1,15 @@
-@use '~@angular/material' as mat;
-/* You can add global styles to this file, and also import other style files */
-@import './variables.scss';
-@import 'module';
+@use 'shared/colors' as shared-colors;
 @import 'styles_material.scss';
 
 html,
 body {
   height: 100%;
   box-sizing: border-box;
-  background-color: mat.get-color-from-palette($background-pallete2, 900);
+  background-color: shared-colors.$background-first;
 }
 
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-
-:root {
-  --primary-blue: #007cbe;
+  color: shared-colors.$font-primary;
 }

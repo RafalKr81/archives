@@ -1,0 +1,9 @@
+@use 'palettes' as pal;
+@use '~@angular/material' as mat;
+
+$font-primary: mat.get-color-from-palette(pal.$dark-pallete, 100);
+$font-accent: mat.get-color-from-palette(pal.$dark-pallete, A100);
+
+$background-first: mat.get-color-from-palette(pal.$dark-pallete, 900);
+$background-second: mat.get-color-from-palette(pal.$dark-pallete, 800);
+$background-third: mat.get-color-from-palette(pal.$dark-pallete, 700);
