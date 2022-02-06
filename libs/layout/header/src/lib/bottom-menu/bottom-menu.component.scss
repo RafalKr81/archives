@@ -1,7 +1,7 @@
-@use './apps/archives/src/variables.scss' as var;
+@use 'shared/colors' as shared-colors;
 
 .menu-user-name {
   font-size: 14px;
-  font-weight: 300;
-  color: var.$font-blue;
+  font-weight: 400;
+  color: shared-colors.$font-accent;
 }

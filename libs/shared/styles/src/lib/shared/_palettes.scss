@@ -1,7 +1,6 @@
 @use '~@angular/material' as mat;
 
-/* For use in src/lib/core/theming/_palette.scss */
-$background-colors: (
+$dark-colors: (
   50: #e6e7e8,
   100: #c1c3c5,
   200: #989b9e,
@@ -34,6 +33,4 @@ $background-colors: (
   ),
 );
 
-$background-pallete2: mat.define-palette($background-colors);
-
-$accent-font: mat.get-color-from-palette($background-pallete2, A100);
+$dark-pallete: mat.define-palette($dark-colors);
