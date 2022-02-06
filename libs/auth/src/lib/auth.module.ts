@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthControllerService } from './services/auth-controller.service';
 import { StoreModule } from '@ngrx/store';
 import * as fromAuthReducer from './+states/auth.reducer';
+import { AuthFacade } from './+states/auth.facade';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import * as fromAuthReducer from './+states/auth.reducer';
     ),
   ],
   declarations: [LoginComponent, LogoutComponent],
+  providers: [AuthFacade],
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {

@@ -8,7 +8,12 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule],
-  declarations: [HeaderComponent, LogoComponent, BottomMenuComponent, HeaderMenuComponent],
+  declarations: [
+    HeaderComponent,
+    LogoComponent,
+    BottomMenuComponent,
+    HeaderMenuComponent,
+  ],
   exports: [HeaderComponent],
 })
 export class HeaderModule {}

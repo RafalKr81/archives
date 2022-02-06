@@ -86,10 +86,7 @@
               "apps/archives/src/favicon.ico",
               "apps/archives/src/assets"
             ],
-            "styles": [
-              "apps/archives/src/styles_material.scss",
-              "apps/archives/src/styles.scss"
-            ],
+            "styles": ["apps/archives/src/styles.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared/styles/src/lib"]
             },
@@ -241,6 +238,31 @@
             "lintFilePatterns": [
               "libs/layout/header/src/**/*.ts",
               "libs/layout/header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-functions": {
+      "projectType": "library",
+      "root": "libs/shared/functions",
+      "sourceRoot": "libs/shared/functions/src",
+      "prefix": "archives",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/functions"],
+          "options": {
+            "jestConfig": "libs/shared/functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/functions/src/**/*.ts",
+              "libs/shared/functions/src/**/*.html"
             ]
           }
         }

@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { User } from '@archives/auth';
 
 @Component({
   selector: 'arc-layout-header-menu',
@@ -8,6 +9,9 @@ import { AuthService } from '@auth0/auth0-angular';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderMenuComponent {
+  @Input()
+  user: User | null;
+
   constructor(private auth: AuthService) {}
 
   onLogout(): void {

@@ -13,11 +13,13 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
       "@archives/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@archives/auth": ["libs/auth/src/index.ts"],
       "@archives/layout/header": ["libs/layout/header/src/index.ts"],
+      "@archives/shared/functions": ["libs/shared/functions/src/index.ts"],
       "@archives/shared/material": ["libs/shared/material/src/index.ts"],
       "@archives/shared/styles": ["libs/shared/styles/src/index.ts"]
     }

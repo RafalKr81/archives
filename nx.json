@@ -46,6 +46,9 @@
     "layout-header": {
       "tags": []
     },
+    "shared-functions": {
+      "tags": []
+    },
     "shared-material": {
       "tags": []
     },
