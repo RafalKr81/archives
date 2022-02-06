@@ -1,0 +1,7 @@
+@use './apps/archives/src/variables.scss' as var;
+
+.menu-user-name {
+  font-size: 14px;
+  font-weight: 300;
+  color: var.$font-blue;
+}

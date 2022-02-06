@@ -3,7 +3,25 @@
   <button mat-button disabled>Houses</button>
   <button mat-button disabled>Gardens</button>
 </div>
+
 <span class="example-spacer"></span>
-<button mat-icon-button class="example-icon" (click)="onLogout()">
-  <mat-icon>logout</mat-icon>
+
+<button
+  *ngIf="user"
+  mat-icon-button
+  class="user-menu-button"
+  [matMenuTriggerFor]="menu"
+>
+  <img [src]="user.picture" alt="User's profile picture" />
 </button>
+
+<mat-menu #menu="matMenu">
+  <div class="menu">
+    <div class="menu-user-name">Welcome {{ user?.name }}</div>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="onLogout()">
+      <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </div>
+</mat-menu>

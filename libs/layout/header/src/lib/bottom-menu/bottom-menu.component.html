@@ -1,3 +1,6 @@
+<div class="menu-user-name" *ngIf="user$ | async as user">
+  Welcome, {{ user.name }}
+</div>
 <mat-nav-list>
   <mat-list-item (click)="openLink($event)">
     <span mat-line>Events</span>
