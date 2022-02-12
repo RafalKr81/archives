@@ -1,5 +1,19 @@
 <div class="header-item-container">
-  <button mat-button>Events</button>
+  <button
+    mat-icon-button
+    [routerLink]="['/']"
+    [routerLinkActive]="'router-link-active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+  </button>
+  <button
+    mat-button
+    [routerLink]="['/events']"
+    routerLinkActive="router-link-active"
+  >
+    Events
+  </button>
   <button mat-button disabled>Houses</button>
   <button mat-button disabled>Gardens</button>
 </div>

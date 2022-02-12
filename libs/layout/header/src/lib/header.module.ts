@@ -5,9 +5,10 @@ import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
 import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, RouterModule],
   declarations: [
     HeaderComponent,
     LogoComponent,

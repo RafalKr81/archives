@@ -5,3 +5,9 @@
   font-weight: 400;
   color: shared-colors.$font-accent;
 }
+
+mat-list-item {
+  &.router-link-active {
+    color: shared-colors.$font-accent !important;
+  }
+}

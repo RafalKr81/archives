@@ -3,7 +3,19 @@
 </div>
 <mat-nav-list>
   <mat-divider></mat-divider>
-  <mat-list-item (click)="openLink($event)">
+  <mat-list-item
+    (click)="openLink($event)"
+    [routerLink]="['/']"
+    [routerLinkActive]="'router-link-active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home
+  </mat-list-item>
+  <mat-list-item
+    (click)="openLink($event)"
+    [routerLink]="['/events']"
+    [routerLinkActive]="'router-link-active'"
+  >
     <span mat-line>Events</span>
   </mat-list-item>
   <mat-list-item (click)="openLink($event)">

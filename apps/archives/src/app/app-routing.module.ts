@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { authRoutes, AuthGuard } from '@archives/auth';
+import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: MainPageComponent,
     loadChildren: () =>
-      import('./admin/admin.module').then((m) => m.AdminModule),
+      import('./main-page/main-page.module').then((m) => m.MainPageModule),
     canLoad: [AuthGuard],
-    pathMatch: 'full',
+    // pathMatch: 'full',
   },
   {
     path: 'auth',

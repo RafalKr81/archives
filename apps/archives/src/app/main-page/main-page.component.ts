@@ -7,10 +7,10 @@ import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'arc-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss'],
+  templateUrl: './main-page.component.html',
+  styleUrls: ['./main-page.component.scss'],
 })
-export class AdminComponent implements OnInit {
+export class MainPageComponent implements OnInit {
   user: any;
 
   constructor(public auth: AuthService, private http: HttpClient) {}

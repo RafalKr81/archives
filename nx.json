@@ -43,6 +43,9 @@
     "auth": {
       "tags": []
     },
+    "layout-events": {
+      "tags": []
+    },
     "layout-header": {
       "tags": []
     },
