@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { InitAppService } from './init-app.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const initAppServiceFactory =
   (initAppService: InitAppService) => (): void =>
@@ -19,7 +20,7 @@ export const initAppServiceFactory =
 
 // todo: add server origin from configuration file
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

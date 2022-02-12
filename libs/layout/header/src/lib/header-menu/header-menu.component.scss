@@ -35,3 +35,9 @@
     color: shared-colors.$font-accent;
   }
 }
+
+button {
+  &.router-link-active {
+    color: shared-colors.$font-accent !important;
+  }
+}
